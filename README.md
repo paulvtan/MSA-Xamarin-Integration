@@ -1,5 +1,5 @@
 # Additional Features 
-## Interaction with a mobile, cross platform app <img src="screenshots/xamarin-logo.png"/>
+## Interaction with a mobile, cross platform app <img src="screenshots/xamarin+bot.png" width="400px"/>
 
 ### Preface
 
