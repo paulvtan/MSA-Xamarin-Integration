@@ -46,6 +46,10 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 <p align="center"><img src="screenshots/deleting_xamarin from_all projects.gif" width="800"/></p>
 
 <p>4. Take the project.json file from this repo, and add it to the Portable Class Library (PCL). Then re-check properties tab, the PCL now should be targeting <b>.NETStandard1.6</b>, which works with <b>Microsoft.Bot.Connector.DirectLine.</b></p>
+
+<p align="center"><img src="screenshots/adding_project.json_file.gif" width="800"/></p>
+
+ <p align="center"><u><b>Test your app on the emulator. If there's no issue, you are ready to move on to the next step. </b></u></p>
 </details>
 
 
