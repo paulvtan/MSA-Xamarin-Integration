@@ -13,8 +13,7 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 
 1. First you need to download the starting base project from this repository here. This is because **Microsoft.Bot.Connector.DirectLine** library that allows us to implement C# classes for using the Bot Framework Direct Line REST API __cannot__ be added to Portable Class Library directly. 
 
-
-⋅⋅⋅Therefore for an easier start, we have modified the project properties to target to .NET Platform Standard for you. 
+   Therefore for an easier start, we have modified the project properties to target to .NET Platform Standard for you. 
 
   <p align="center"><img src="screenshots/1.PNG"/></p>
   <p align="center"><u>At the end of the re-target process or opening downloaded base project, in the properties tab of your Portable Class, target should be .NETStandard1.6 </u></p>
@@ -40,9 +39,15 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 
  <p align="center"><img src="screenshots/current_framework.png" width="800"/></p>
  
- <p>3. We can not simply just 'change' the Targets framework as Xamarin.Forms library in PCL is not supported by .NET Standard. We first need to <b>remove Xamarin.Forms from our projects.</b> This can be done by going into <b>NuGet Package Manager</b> of our solution and delete Xamarin.Forms from all the projects. </p>
+ <p>3. We can not simply just 'change' the Targets framework as Xamarin.Forms library in PCL is not supported by .NET Standard. We first need to <b>remove Xamarin.Forms from our projects.</b></p> 
+ 
+<p>This can be done by going into <b>NuGet Package Manager</b> of our solution and delete Xamarin.Forms from all the projects. </p>
 
 <p align="center"><img src="screenshots/deleting_xamarin from_all projects.gif" width="800"/></p>
+
+<p>4. Take the project.json file from this repo, and add it to the Portable Class Library (PCL). Then re-check properties tab, the PCL now should be targeting <b>.NETStandard1.6</b>, which works with <b>Microsoft.Bot.Connector.DirectLine.</b></p>
 </details>
+
+
 
 
