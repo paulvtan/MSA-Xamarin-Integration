@@ -31,7 +31,7 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 <p align="center"><img src="screenshots/creating_new_project.gif" width="800"/></p>
 
 
-<p>2. Next step </p>
+<p>2. Examining the current target framework for your portable class it should be as per below screenshot or similar. We need to re-target this to .NET Standard instead for <b>Microsoft.Bot.Connector.DirectLine</b> to work.</p>
 </details>
 
 
