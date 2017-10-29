@@ -22271,12 +22271,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
       "projectName": "XamarinFoodBot.UWP",
-      "projectPath": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\project.json",
+      "projectPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\project.json",
       "packagesPath": "C:\\Users\\paulv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\obj\\",
+      "outputPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\paulv\\AppData\\Roaming\\NuGet\\NuGet.Config",
