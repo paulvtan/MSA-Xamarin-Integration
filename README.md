@@ -17,11 +17,11 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 &#x26a0; _If however the base project doesn't work for you or you would like to start from scratch, then follow the steps below._
 
 <!--- Starting from scratch instructions section --->
-<details style="background-color: #ECECEA;">
+<details style="background-color: red;">
   <summary>
     <b> Starting from Scratch </b>
     </summary>
-    <h1>Manually Re-target Framework</h1>
+    <h3>Manually Re-target Framework</h3>
     <p>
     1. Create the new Xamarin.Forms project by opening up Visual Studio 2017, then <b>File -> New -> Project... -> Cross Platform App (Xamarin) -> Blank App.</b> </p>
 <ul>
