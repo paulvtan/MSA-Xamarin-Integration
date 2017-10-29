@@ -23,8 +23,15 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
     </summary>
     <br>
     <p>
-    1. Create the new Xamarin.Forms project by opening up Visual Studio 2017, <b>File -> New -> Project... -> Cross Platform App (Xamarin) -> Blank App**.</b> </p>
-    <p align="center"><img src="screenshots/creating_new_project.gif" width="800"/></p>
+    1. Create the new Xamarin.Forms project by opening up Visual Studio 2017, then <b>File -> New -> Project... -> Cross Platform App (Xamarin) -> Blank App.</b> </p>
+<ul>
+<li>UI Technology -> <b>Xamarin.Forms</b></li>
+<li>Code Sharing Strategy -> <b>Portable Class Library (PCL)</b></li>
+</ul>
+<p align="center"><img src="screenshots/creating_new_project.gif" width="800"/></p>
+
+
+<p>2. Next step </p>
 </details>
 
 
