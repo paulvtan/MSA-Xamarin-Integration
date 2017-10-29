@@ -19,7 +19,7 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 <!--- Starting from scratch instructions section --->
 <details>
   <summary>
-    <h3><b> Starting from Scratch</b></h3>
+    <b>Starting from Scratch</b>
     </summary>
     <h3>Manually Re-target Framework</h3>
     <p>
