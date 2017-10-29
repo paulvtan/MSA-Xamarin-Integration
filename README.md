@@ -20,8 +20,10 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 <details>
   <summary>
     <b> Starting from Scratch </b>
-  </summary>
-    </br>
+    </summary>
+    <br>
+    <p>
+    1. Create the new Xamarin.Forms project by opening up Visual Studio 2017, <b>File -> New -> Project... -> Cross Platform App (Xamarin) -> Blank App**.</b> </p>
     <p align="center"><img src="screenshots/creating_new_project.gif" width="800"/></p>
 </details>
 
