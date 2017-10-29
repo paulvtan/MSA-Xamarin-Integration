@@ -49,8 +49,18 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 
 <p align="center"><img src="screenshots/adding_project.json_file.gif" width="800"/></p>
 
- <p align="center"><u><b>Test your app on the emulator. If there's no issue, you are ready to move on to the next step. </b></u></p>
+<p>5. Go back to NuGet Package Manager window for your project, in the browse tab search for Xamarin.Forms and re-add it to all the projects.</p>
+
+<p align="center"><img src="screenshots/re_adding_xamarin.png" width="800"/></p>
+
+<p>5. Test your app on the emulator. If there's no issue, you are ready to move on to the next step. </p>
+
+<p align="center"><img src="screenshots/blank_xamarin_app.png" width="250"/></p>
+
 </details>
+
+
+2. Go into the project
 
 
 
