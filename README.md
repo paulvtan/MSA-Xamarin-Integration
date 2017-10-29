@@ -58,7 +58,7 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 <p align="center"><img src="screenshots/blank_xamarin_app.png" width="250"/></p>
 
 </details>
-
+<br>
 
 2. Go into the project
 
