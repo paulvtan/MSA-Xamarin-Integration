@@ -33,7 +33,9 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 
 <p>2. Examining the current target framework for your portable class it should be as per below screenshot or similar. We need to re-target this to .NET Standard instead for <b>Microsoft.Bot.Connector.DirectLine</b> to work.</p>
 
- <p align="center"><img src="screenshots/current_framework.png"/></p>
+ <p align="center"><img src="screenshots/current_framework.png" width="800"/></p>
+ 
+ <p>3. First remove xamarin.forms - </p>
 
 </details>
 
