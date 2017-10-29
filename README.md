@@ -60,8 +60,10 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 </details>
 <br>
 
-2. Go into the project
+2. Now, to add the **Microsoft.Bot.Connector.DirectLine** library into the project, go to the NuGet Package Manager of your project. Browse to Microsoft.Bot.Connector.DirectLine, and install the library to all the projects in your solution.
 
+<p align="center"><img src="screenshots/adding_directline_library.png" width="800"/></p>
 
+  <p align="center"><b>Make sure your app is still working by testing it on the emulator.</b></p>
 
 
