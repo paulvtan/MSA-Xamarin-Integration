@@ -12,12 +12,12 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 1. First you need to download the starting base project from this repository here. This is because **Microsoft.Bot.Connector.DirectLine** library that allows us to implement C# classes for using the Bot Framework Direct Line REST API __cannot__ be added to Portable Class Library directly. Therefore for an easier start, we have modified the project properties to target to .NET Platform Standard for you. 
 
   <p align="center"><img src="screenshots/1.PNG"/></p>
-  <p align="center"><u>At the end of the re-target process or downloaded base project, in the properties tab of your Portable Class, it should be targeting .NETStandard1.6 </u></p>
+  <p align="center"><u>At the end of the re-target process or opening downloaded base project, in the properties tab of your Portable Class, target should be .NETStandard1.6 </u></p>
 
 &#x26a0; _If however the base project doesn't work for you or you would like to start from scratch, then follow the steps below._
 
 <!--- Starting from scratch instructions section --->
-<details>
+<details style="background-color: #ECECEA;">
   <summary>
     <b> Starting from Scratch </b>
     </summary>
