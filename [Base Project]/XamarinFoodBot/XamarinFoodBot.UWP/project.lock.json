@@ -2158,9 +2158,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
@@ -4428,9 +4425,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
@@ -6734,9 +6728,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
@@ -9013,9 +9004,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     },
     "UAP,Version=v10.0.10586/win10-x64-aot": {
@@ -11328,9 +11316,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
@@ -13607,9 +13592,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
@@ -15922,9 +15904,6 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
-      },
-      "XamarinFoodBot/1.0.0": {
-        "type": "project"
       }
     }
   },
@@ -22278,11 +22257,6 @@
         "xamarin.forms.2.4.0.18342.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
-    },
-    "XamarinFoodBot/1.0.0": {
-      "type": "project",
-      "path": "../XamarinFoodBot/XamarinFoodBot.csproj",
-      "msbuildProject": "../XamarinFoodBot/XamarinFoodBot.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -22297,12 +22271,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
       "projectName": "XamarinFoodBot.UWP",
-      "projectPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot.UWP\\project.json",
+      "projectPath": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\XamarinFoodBot.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\project.json",
       "packagesPath": "C:\\Users\\paulv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot.UWP\\obj\\",
+      "outputPath": "C:\\Users\\paulv\\Desktop\\MSA Advance Training\\[Base Project]\\XamarinFoodBot\\XamarinFoodBot.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\paulv\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22311,15 +22285,6 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
-      },
-      "frameworks": {
-        "uap10.0.10586": {
-          "projectReferences": {
-            "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot.csproj": {
-              "projectPath": "C:\\Users\\paulv\\Desktop\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot\\XamarinFoodBot.csproj"
-            }
-          }
-        }
       }
     },
     "dependencies": {
