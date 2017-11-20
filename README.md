@@ -21,7 +21,7 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 &#x26a0; _If however the base project doesn't work for you or you would like to start from scratch, then follow the steps below._
 
 <!--- Starting from scratch instructions section --->
-<div style="background-color: red">
+<div style="background: red">
 <details>
   <summary>
     <b>Starting from Scratch</b>
