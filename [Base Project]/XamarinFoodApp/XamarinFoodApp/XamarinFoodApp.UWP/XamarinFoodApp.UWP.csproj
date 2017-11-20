@@ -151,12 +151,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\XamarinFoodApp\XamarinFoodApp.csproj">
-      <Project>{cd5e2400-d2bd-44da-8b2e-a1a0eba42b7c}</Project>
-      <Name>XamarinFoodApp</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

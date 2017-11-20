@@ -21,6 +21,7 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 &#x26a0; _If however the base project doesn't work for you or you would like to start from scratch, then follow the steps below._
 
 <!--- Starting from scratch instructions section --->
+<div style="background-color: red">
 <details>
   <summary>
     <b>Starting from Scratch</b>
@@ -58,6 +59,8 @@ So, you have decided to choose interaction with a mobile, cross platform app as 
 <p align="center"><img src="screenshots/blank_xamarin_app.png" width="250"/></p>
 
 </details>
+</div>
+
 <br>
 
 2. Now, to add the **Microsoft.Bot.Connector.DirectLine** library into the project, go to the NuGet Package Manager of your project. Browse to Microsoft.Bot.Connector.DirectLine, and install the library to all the projects in your solution.
