@@ -282,6 +282,7 @@ namespace XamarinFoodApp
     }
 }
 ```
+If you would like to test your bot, you can try this key below. (For testing) API Key: `PlxrUyTE_HU.cwA.LZM.KOW4p0_Uf5DWugAuAcB649p90pSfiiYQLak4oWdFqzg`
 
 <h3> Step 4: Creating the interface for our app </h3>
 
