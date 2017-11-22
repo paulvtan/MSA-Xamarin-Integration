@@ -56,7 +56,7 @@ As one of the requirement, you have an option of choosing interaction with a mob
 
 1. First you need to download the starting base project from this repository here. This is because **Microsoft.Bot.Connector.DirectLine** package that allows us to implement C# classes for using the Bot Framework Direct Line REST API __cannot__ be added to Portable Class Library directly. 
 
-   Therefore for an easier start, we have modified the project properties to target to .NET Platform Standard for you. 
+   Therefore for an easier start, we have modified the project to target to .NET Platform Standard for you. 
 
   <p align="center"><img src="screenshots/1.PNG"/></p>
   <p align="center"><u>At the end of the re-target process or opening downloaded base project, in the properties tab of your Portable Class, target should be .NETStandard1.6 </u></p>
