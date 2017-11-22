@@ -143,6 +143,78 @@ public void SendMessage(string message)
 }
 ```
 
+
+
+<h3> Step3: Handling the data binding & storing messages.</h3>
+
+1. Create another class (Right Click .NetStandard project -> Add -> Class...), and call it __MessageListItem__.
+
+  This class will help with data collection and binding. It helps displays our messages to the UI. The method binds text to the elements in xmal ContentPage that we will work on in the later section.
+
+
+```
+    class MessageListItem
+    {
+        public string Text { get; set; }
+        public string Sender { get; set; }
+
+
+        //This method bind data to element in xaml UI ContentPage.
+        public MessageListItem(string text, string sender)
+        {
+            Text = text;
+            Sender = sender;
+        }
+    }
+```
+
+  The object of MessageListItem will be stored in `ObservableCollection` messageList object we will create and use later for holding the messages.
+
+<h3> Step4: Handling Retreiving & Checking for New Messages from the Server. </h3> 
+
+1. This method starts a loop that periodically check for any new messages. The method takes in `ObservableCollection` object so we can push messages we retrieve from the bot to our collection.
+
+  We will write a `Send()` method to display the messages to the UI later.
+
+2. The `var activitySet` object periodically pulled from the bot server contains messages.
+
+3. We check for each `activity` object in the `activitySet` object for messages from the bot, and add them to the `MessageListItem` object. 
+
+  With the help of `MessageListItem` class, the message will be displayed on the UI.
+
+4. The method wait 3 seconds then check again. 
+
+```
+public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collection)
+{
+    string watermark = null;
+
+    //Loop retrieval
+    while(true)
+    {
+        Debug.WriteLine("Reading message every 3 seconds");
+
+        //Get activities (messages) after the watermark
+        var activitySet = await Client.Conversations.GetActivitiesAsync(MainConversation.ConversationId, watermark);
+
+        //Set new watermark
+        watermark = activitySet?.Watermark;
+
+        //Loop through the activities and add them to the list
+        foreach(Activity activity in activitySet.Activities)
+        {
+            if (activity.From.Name == "MSAFoodBot")
+            {
+                collection.Add(new MessageListItem(activity.Text, activity.From.Name));
+            }             
+        }
+
+        //Wait 3 seconds
+        await Task.Delay(3000);
+    }
+}
+``` 
+
 ⭐ **__Your final `BotConnection.cs` should looks something similar to below.__**
 
 ```
@@ -214,75 +286,6 @@ namespace XamarinFoodApp
 }
 ```
 
-<h3> Step3: Handling the data binding & storing messages.</h3>
-
-1. Create another class (Right Click .NetStandard project -> Add -> Class...), and call it __MessageListItem__.
-
-  This class will help with data collection and binding. It helps displays our messages to the UI. The method binds text to the elements in xmal ContentPage that we will work on in the later section.
-
-
-```
-    class MessageListItem
-    {
-        public string Text { get; set; }
-        public string Sender { get; set; }
-
-
-        //This method bind data to element in xaml UI ContentPage.
-        public MessageListItem(string text, string sender)
-        {
-            Text = text;
-            Sender = sender;
-        }
-    }
-```
-
-  The object of MessageListItem will be stored in `ObservableCollection` messageList object we will create and use later for holding the messages.
-
-<h3> Step4: Handling Retreiving & Checking for New Messages from the Server. </h3> 
-
-1. This method starts a loop that periodically check for any new messages. The method takes in `ObservableCollection` object so we can push messages we retrieve from the bot to our collection.
-
-  We will write a `Send()` method to display the messages to the UI later.
-
-2. The `var activitySet` object periodically pulled from the bot server contains messages.
-
-3. We check for each `activity` object in the `activitySet` object for messages from the bot, and add them to the `MessageListItem` object. 
-
-  With the help of `MessageListItem` class, the message will be displayed on the UI.
-
-4. The method wait 3 seconds then check again. 
-```
-public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collection)
-{
-    string watermark = null;
-
-    //Loop retrieval
-    while(true)
-    {
-        Debug.WriteLine("Reading message every 3 seconds");
-
-        //Get activities (messages) after the watermark
-        var activitySet = await Client.Conversations.GetActivitiesAsync(MainConversation.ConversationId, watermark);
-
-        //Set new watermark
-        watermark = activitySet?.Watermark;
-
-        //Loop through the activities and add them to the list
-        foreach(Activity activity in activitySet.Activities)
-        {
-            if (activity.From.Name == "MSAFoodBot")
-            {
-                collection.Add(new MessageListItem(activity.Text, activity.From.Name));
-            }             
-        }
-
-        //Wait 3 seconds
-        await Task.Delay(3000);
-    }
-}
-``` 
-
 <h3> Step 4: Creating the interface for our app </h3>
 
 1. We will use ContentPage to create a UI for the user to interact with the bot. If `MainPage.xmal` is not added yet right click .NetStandard project -> Add -> New Item... ->  Content Page.
@@ -295,7 +298,9 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
 
   * The `TextCell` is a simple cell type that has text and detail properties. `Binding Text` and `Binding Sender` are two properties from the custom MessageListItem class we created. This will allow us to bind the messages to these elements and display them to the user.
 
-3. 'Entry' is a text-field where user can type message. When the user tap Enter, `Completed="Send"` will trigger a method `Send()`, which takes care of sending the message to the bot. We will implement the `Send()` method in the following section. 
+3. 'Entry' is a text-field where user can type message. When the user tap Enter, `Completed="Send"` will trigger a method `Send()`, which takes care of sending the message to the bot. We will implement the `Send()` method in the upcoming section. 
+
+⭐ **__Your final `MainPage.xaml` should looks something similar to below.__**
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -327,7 +332,7 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
 
 </ContentPage>
 ```
-⭐ **__Your final `MainPage.xaml` should looks something similar to above.__**
+
 
 <h3> Step 5: Connecting the Bot to the XAML Page of the Xamarin App </h3>
 
