@@ -327,7 +327,7 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
 
 </ContentPage>
 ```
-<p style="background-color: #FFFFE0"><b>Your final `MainPage.xaml` should looks something similar to above.</b></p>
+⭐ **__Your final `MainPage.xaml` should looks something similar to above.__**
 
 <h3> Step 5: Connecting the Bot to the XAML Page of the Xamarin App </h3>
 
@@ -370,7 +370,7 @@ public void Send(object sender, EventArgs args)
 }
 ```
 <br>
-<p style="background-color: #FFFFE0"><b>Your final `MainPage.xaml.cs` should looks something like this.</b></p>
+⭐ **__Your final `MainPage.xaml.cs` should looks something like this.__**
 
 ```
 using System;
