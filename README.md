@@ -370,6 +370,7 @@ public void Send(object sender, EventArgs args)
 }
 ```
 <br>
+
 ⭐ **__Your final `MainPage.xaml.cs` should looks something like this.__**
 
 ```
