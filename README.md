@@ -200,7 +200,7 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
         //Loop through the activities and add them to the list
         foreach(Activity activity in activitySet.Activities)
         {
-            if (activity.From.Name == "MSAFoodBot")
+            if (activity.From.Name != Account.Name)
             {
                 collection.Add(new MessageListItem(activity.Text, activity.From.Name));
             }             
@@ -449,3 +449,5 @@ Don't forget to test your app regularly throughout your development, the final r
 <p align="center"><img src="screenshots/final_result.png" width="400"/></p>
 
 <h3 align="center">Hope you found the guide useful. Good luck with the rest of the program! 👍</h3>
+
+__Reference:__ **Building a cross-platform bot app for Powerupcloud with Xamarin and Cognitive Services** By Alyssa Ong, James Lee, and Ujjwal Kumar.
