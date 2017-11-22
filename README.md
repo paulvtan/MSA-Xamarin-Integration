@@ -143,7 +143,7 @@ public void SendMessage(string message)
 }
 ```
 
-<p style="background-color: #FFFFE0"><b>Your final `BotConnection.cs` should looks something similar to below.</b></p>
+**__Your final `BotConnection.cs` should looks something similar to below.__**
 
 ```
 using System;
