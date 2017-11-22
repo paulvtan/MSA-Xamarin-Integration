@@ -410,6 +410,12 @@ namespace XamarinFoodApp
         public MainPage ()
 		{
 			InitializeComponent ();
+
+            //Bind the ListView to the ObservableCollection
+            MessageListView.ItemsSource = messageList;
+
+            //Start listening to messages and add any new ones to the collection
+            var messageTask = connection.GetMessagesAsync(messageList);
 		}
 
         //Send() method takes the user input and send it to the bot server.
