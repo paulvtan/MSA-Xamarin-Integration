@@ -339,7 +339,7 @@ namespace XamarinFoodApp
 
 ```
 //Initialize a connection with ID and Name
-BotConnection connection = new BotConnection("Paul");
+BotConnection connection = new BotConnection("MyFoodBot");
 ```
 
 3. Initialize a `ObservableCollection` object containing objects of type `MessageListItem` to store our messages.
@@ -441,3 +441,11 @@ namespace XamarinFoodApp
     }
 }
 ```
+
+<h2> Conclusion </h2>
+
+Don't forget to test your app regularly throughout your development, the final result of this should enable you to interact with your bot through Xamarin.Forms application. 
+
+<p align="center"><img src="screenshots/final_result.png" width="400"/></p>
+
+<h3 align="center">Hope you found the guide useful. Good luck with the rest of the program! 👍</h3>

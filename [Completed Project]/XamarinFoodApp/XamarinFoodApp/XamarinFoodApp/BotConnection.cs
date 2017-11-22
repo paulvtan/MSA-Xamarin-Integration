@@ -10,7 +10,7 @@ namespace XamarinFoodApp
 {
     class BotConnection
     {
-        public DirectLineClient Client = new DirectLineClient("PlxrUyTE_HU.cwA.LZM.KOW4p0_Uf5DWugAuAcB649p90pSfiiYQLak4oWdFqzg"); //DirectLine key
+        public DirectLineClient Client = new DirectLineClient("PlxrUyTE_HU.cwA.LZM.KOW4p0_Uf5DWugAuAcB649p90pSfiiYQLak4oWdFqzg"); //DirectLine key for testing
         public Conversation MainConversation;
         public ChannelAccount Account;
 
