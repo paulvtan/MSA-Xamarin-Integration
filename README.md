@@ -11,7 +11,7 @@ As one of the requirement, you have an option of choosing interaction with a mob
 
 <h3>Step 1: Getting Direct Line API up and running.</h3>
 
-<h4> Staring from Base Project</h4>
+<h4> Starting from Base Project</h4>
 
 1. First you need to download the starting base project from this repository here. This is because **Microsoft.Bot.Connector.DirectLine** package that allows us to implement C# classes for using the Bot Framework Direct Line REST API __cannot__ be added to Portable Class Library directly. 
 
