@@ -105,7 +105,7 @@ class BotConnection
 
 <p align="center"><img src="screenshots/directline_key.png" width="800"/></p>
 
-__! The direct line key is obtained from your Bot Framework portal.__
+__&#x26a0; The direct line key is obtained from your Bot Framework portal.__
 
 4. Next we will create a class constructor, which initialize our other two variables. 
 
@@ -143,6 +143,45 @@ public void SendMessage(string message)
 }
 ```
 
+⭐ **__`BotConnection.cs` is still in progress, but so far it should looks something similar to below.__**
+
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Bot.Connector.DirectLine;
+using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+
+namespace XamarinFoodApp
+{
+    class BotConnection
+    {
+        public DirectLineClient Client = new DirectLineClient("VDiY87OEgwo.cwA.N9k.oCy0yVt8Mc7K90Zmol8UIn8SF95Cn9wK_zPJjIdMY2s"); //DirectLine key
+        public Conversation MainConversation;
+        public ChannelAccount Account;
+
+        public BotConnection(string accountName)
+        {
+            MainConversation = Client.Conversations.StartConversation();
+            Account = new ChannelAccount { Id = accountName, Name = accountName };
+        }
+
+        public void SendMessage(string message)
+        {
+            Activity activity = new Activity
+            {
+                From = Account,
+                Text = message,
+                Type = ActivityTypes.Message
+            };
+            Client.Conversations.PostActivity(MainConversation.ConversationId, activity);
+        }
+    }
+}
+```
+
 
 
 <h3> Step3: Handling the data binding & storing messages.</h3>
@@ -172,7 +211,7 @@ public void SendMessage(string message)
 
 <h3> Step4: Handling Retreiving & Checking for New Messages from the Server. </h3> 
 
-1. This method starts a loop that periodically check for any new messages. The method takes in `ObservableCollection` object so we can push messages we retrieve from the bot to our collection.
+1. Add `GetMessagesAsync` to `BotConnection.cs class`. This method starts a loop that periodically check for any new messages. The method takes in `ObservableCollection` object so we can push messages we retrieve from the bot to our collection.
 
   We will write a `Send()` method to display the messages to the UI later.
 
@@ -269,7 +308,7 @@ namespace XamarinFoodApp
                 //Loop through the activities and add them to the list
                 foreach (Activity activity in activitySet.Activities)
                 {
-                    if (activity.From.Name == "MSAFoodBot")
+                    if (activity.From.Name != Account.Name)
                     {
                         collection.Add(new MessageListItem(activity.Text, activity.From.Name));
                     }
@@ -306,8 +345,8 @@ namespace XamarinFoodApp
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:App6"
-             x:Class="App6.MainPage">
+             xmlns:local="clr-namespace:XamarinFoodApp"
+             x:Class="XamarinFoodApp.MainPage">
 
     <StackLayout Spacing="10" Padding="10" HorizontalOptions="Fill" VerticalOptions="Fill" Orientation="Vertical">
    
@@ -351,7 +390,17 @@ BotConnection connection = new BotConnection("Paul");
 ObservableCollection<MessageListItem> messageList = new ObservableCollection<MessageListItem>();
 ```
 
-3. Next, we need to implement a `Send()` methods, which takes care of taking the text the user types, and calling the method `SendMessage()` on the connection object from `BotConnection` class we implemented earlier.  
+3. In the constructor of `MainPage` class, when the page is instantiated we map the `messageList` object to __MessageListView__ in MainPage.xaml for displaying the message everytime new `messageListItem` is added. We also call `GetMessagesAsync()` method to starts the loop checking, retrieving and adding messages from the bot to our list. 
+
+```
+            //Bind the ListView to the ObservableCollection
+            MessageListView.ItemsSource = messageList;
+
+            //Start listening to messages and add any new ones to the collection
+            var messageTask = connection.GetMessagesAsync(messageList);
+```
+
+4. Next, we need to implement a `Send()` methods, which takes care of taking the text the user types, and calling the method `SendMessage()` on the connection object from `BotConnection` class we implemented earlier.  
 
   The message is also placed into the ListView.
 ```
